@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Ro'yxatdan o'tish|{{block.super}}
+      {% endblock %}
+
+      {% block content %}
+      <form  method="POST">
+        {% csrf_token %}
+        
+      <h2 style="color: red;">{{form}}</h2>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Username kiriting" name="name" required>
+      
+          <label for="psw"><b>Parol</b></label>
+          <input type="password" placeholder="Parolni kiriting" name="password" required>
+          <label for="psw"><b>Parolni tasdiqlash</b></label>
+          <input type="password" placeholder="Parolni qayta kiriting" name="password2" required>
+      
+          <button type="submit">Ro'yxatdan o'tish</button>
+         
+        </div>
+      
+        
+      </form>
+      {% endblock %}

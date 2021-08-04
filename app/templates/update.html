@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Yangilash|{{block.super}}
+      {% endblock %}
+
+      {% block content %}
+    <form action="" method="POST">
+      {% csrf_token %}
+      <label for="basic-url" class="form-label">Vazifalarni yangilash...</label>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" id="basic-url" name="work" aria-describedby="basic-addon3" placeholder="{{form.todo}}" style="color: green;">
+  <input type="submit" value="Vazifa qo'shish" class="btn btn-success">
+</div>
+    </form>
+    
+      {% endblock %}
